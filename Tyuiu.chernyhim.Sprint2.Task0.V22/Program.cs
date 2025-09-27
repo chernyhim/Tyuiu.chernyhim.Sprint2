@@ -10,5 +10,6 @@ internal class Program
         Console.WriteLine("Введите Y");
         y = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine(ds.GetCompareOperations(x, y));
+
     }
 }
