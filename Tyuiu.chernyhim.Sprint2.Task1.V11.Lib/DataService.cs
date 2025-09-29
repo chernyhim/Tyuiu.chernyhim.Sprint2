@@ -7,9 +7,15 @@ namespace Tyuiu.chernyhim.Sprint2.Task1.V11.Lib
         {//145 156 142 117
          // |, &, ||, &&, !, ^
          //(False, False, True, False, True, False)
-            return { true,true,true,true,true,true};
-            ;
-            
+            bool[] results = new bool[6];
+            results[0] = a > b | c < d;
+            results[1] = a > b & c > d;
+            results[2] = a > b || c > d;
+            results[3] = a > b && c > d;
+            results[4] = !(a == b);
+            results[5] = a < b ^ c > d;
+            return results;
+
         }
     }
 }
