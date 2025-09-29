@@ -10,7 +10,7 @@ namespace Tyuiu.chernyhim.Sprint2.Task1.V11.Lib
             bool[] results = new bool[6];
             results[0] = a > b | c < d;
             results[1] = a > b & c > d;
-            results[2] = a > b || c > d;
+            results[2] = a > b && c > d;
             results[3] = a > b && c > d;
             results[4] = !(a == b);
             results[5] = a < b ^ c > d;
