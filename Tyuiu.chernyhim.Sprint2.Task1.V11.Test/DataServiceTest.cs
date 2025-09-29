@@ -19,7 +19,7 @@ namespace Tyuiu.chernyhim.Sprint2.Task1.V11.Test
             bool[] res = new bool[6];
             res = ds.GetLogicOperations(x,y,z,w);
             bool[] wait = { false, false, true, false, true, false };
-            
+            CollectionAssert.AreEqual(res, wait);
         }
     }
 }
