@@ -11,8 +11,10 @@ namespace Tyuiu.chernyhim.Sprint2.Task0.V22.Test
             int x, y;
             x = 3105;
             y = 77;
-            var res = ds.GetCompareOperations(x, y);
-            bool[] ans = { false, true, true, true, true, false };
+            bool[] res = new bool[6];
+            res = ds.GetCompareOperations(x, y);
+            bool[] wait = { false, true, true, true, true, false };
+            CollectionAssert.AreEqual(res, wait);
             
         }
     }
