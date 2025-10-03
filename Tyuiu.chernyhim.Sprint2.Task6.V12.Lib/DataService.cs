@@ -6,33 +6,34 @@ namespace Tyuiu.chernyhim.Sprint2.Task6.V12.Lib
         public string FindDateOfPreviousDay(int g, int m, int n)
         {
             string res;
-            if (n != 1)
-            {                
-                res = Convert.ToString(g + "." + m + "." + (n - 1));                
+            if (n != 1 && n>10)
+            {
+                res = Convert.ToString((n - 1) + "." + m + "." + g);                
+            }
+            else if (n != 1)
+            {
+                res = Convert.ToString("0" + (n - 1) + "." + m + "." + g);
             }
             else
             {
                 res = m switch
                 {
-                    2 => Convert.ToString(g + "." + (m - 1) + "." + 31),
-                    4 => Convert.ToString(g + "." + (m - 1) + "." + 31),
-                    6 => Convert.ToString(g + "." + (m - 1) + "." + 31),
-                    8 => Convert.ToString(g + "." + (m - 1) + "." + 31),
-                    9 => Convert.ToString(g + "." + (m - 1) + "." + 31),
-                    11 => Convert.ToString(g + "." + (m - 1) + "." + 31),
-                    3 => Convert.ToString(g + "." + (m - 1) + "." + 29),
-                    5 => Convert.ToString(g + "." + (m - 1) + "." + 30),
-                    7 => Convert.ToString(g + "." + (m - 1) + "." + 30),
-                    10 => Convert.ToString(g + "." + (m - 1) + "." + 30),
-                    12 => Convert.ToString(g + "." + (m - 1) + "." + 30),
-                    1 => Convert.ToString((g - 1) + "." + 12 + "." + 31),
-                    _=>"нет такого месяца"
-                };                
+                    2 => Convert.ToString("31.0" + (m - 1) + "." + g),
+                    4 => Convert.ToString("31.0" + (m - 1) + "." + g),
+                    6 => Convert.ToString("31.0" + (m - 1) + "." + g),
+                    8 => Convert.ToString("31.0" + (m - 1) + "." + g),
+                    9 => Convert.ToString("31.0" + (m - 1) + "." + g),
+                    11 => Convert.ToString("31." + (m - 1) + "." + g),
+                    3 => Convert.ToString("29.0" + (m - 1) + "." + g),
+                    5 => Convert.ToString("30.0" + (m - 1) + "." + g),
+                    7 => Convert.ToString("30.0" + (m - 1) + "." + g),
+                    10 => Convert.ToString("30.0" + (m - 1) + "." + g),
+                    12 => Convert.ToString("30." + (m - 1) + "." + g),
+                    1 => Convert.ToString("31.12." + (g - 1)),
+                    _ => "Невозможная дата"
+                };
             }
-            return res;
-            
-
-        
+            return res;           
             
         }
     }

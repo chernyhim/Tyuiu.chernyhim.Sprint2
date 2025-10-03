@@ -8,11 +8,11 @@ namespace Tyuiu.chernyhim.Sprint2.Task6.V12.Test
         public void DateValid()
         {
             DataService ds = new DataService();
-            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 1, 1), "2024.12.31");
-            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 3, 1), "2025.2.29");
-            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 4, 1), "2025.3.31");
-            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 5, 1), "2025.4.30");
-            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 11, 11), "2025.11.10");
+            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 1, 1), "31.12.2024");
+            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 3, 1), "29.02.2025");
+            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 4, 1), "31.03.2025");
+            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 5, 1), "30.04.2025");
+            Assert.AreEqual(ds.FindDateOfPreviousDay(2025, 11, 11), "10.11.2025");
         }
     }
 }
