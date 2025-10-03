@@ -8,13 +8,13 @@ namespace Tyuiu.chernyhim.Sprint2.Task5.V4.Lib
             switch (value)
             {
                 case 1:
-                    return "Пики";
+                    return "пики";
                 case 2:
-                    return "Трефы";
+                    return "трефы";
                 case 3:
-                    return "Бубны";
+                    return "бубны";
                 case 4:
-                    return "Червы";
+                    return "червы";
                 default:
                     return "Нет такой масти";
                                             
