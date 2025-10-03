@@ -6,13 +6,17 @@ namespace Tyuiu.chernyhim.Sprint2.Task6.V12.Lib
         public string FindDateOfPreviousDay(int g, int m, int n)
         {
             string res;
-            if (n != 1 && n>10)
+            if (n != 1 && n>10 && m>=10)
             {
                 res = Convert.ToString((n - 1) + "." + m + "." + g);                
             }
-            else if (n != 1)
+            else if (n != 1 && m>=10)
             {
                 res = Convert.ToString("0" + (n - 1) + "." + m + "." + g);
+            }
+            else if (n != 1)
+            {
+                res = Convert.ToString("0" + (n - 1) + ".0" + m + "." + g);
             }
             else
             {
