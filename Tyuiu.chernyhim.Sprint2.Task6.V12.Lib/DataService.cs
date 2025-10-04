@@ -10,9 +10,13 @@ namespace Tyuiu.chernyhim.Sprint2.Task6.V12.Lib
             {
                 res = Convert.ToString((n - 1) + "." + m + "." + g);                
             }
-            else if (n != 1 && m>=10)
+            else if (n != 1 && m>=10 && n<=10)
             {
                 res = Convert.ToString("0" + (n - 1) + "." + m + "." + g);
+            }
+            else if (n!=1 && n > 10)
+            {
+                res = Convert.ToString((n - 1) + ".0" + m + "." + g);
             }
             else if (n != 1)
             {
